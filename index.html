@@ -25,7 +25,7 @@
 
 
   <title>Academic Project Page</title>
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
@@ -52,20 +52,24 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">
+             TPA3D: Triplane Attention for Fast Text-to-3D Generation
+            </h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                Bin-Shih Wu<sup>*</sup>,</span>
                 <span class="author-block">
-                  <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                  Hong-En Chen<sup>*</sup>,</span>
                   <span class="author-block">
-                    <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                    Sheng-Yu Huang,</span>
+                    <span class="author-block">
+                      Yu-Chiang Frank Wang
                   </span>
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
+                    <span class="author-block">National Taiwan University, NVIDIA<br>ECCV 2024</span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
 
@@ -73,7 +77,7 @@
                     <div class="publication-links">
                          <!-- Arxiv PDF link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://arxiv.org/pdf/2312.02647" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
@@ -83,7 +87,7 @@
                     </span>
 
                     <!-- Supplementary PDF link -->
-                    <span class="link-block">
+                    <!-- <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
@@ -91,11 +95,11 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span> -->
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/redxouls/TPA3D" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -106,7 +110,7 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  <a href="https://arxiv.org/abs/2312.02647" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
@@ -124,12 +128,12 @@
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video poster="" id="tree" autoplay controls muted loop height="100%">
+      <video poster="" id="tree" autoplay controls muted loop height="100%"> -->
         <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
+        <!-- <source src="static/videos/banner_video.mp4"
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
@@ -137,7 +141,7 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End teaser video -->
 
 <!-- Paper abstract -->
@@ -145,10 +149,20 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title abstract">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Due to the lack of large-scale text-3D correspondence data,
+recent text-to-3D generation works mainly rely on utilizing 2D diffusion
+models for synthesizing 3D data. Since diffusion-based methods typically
+require significant optimization time for both training and inference, the
+use of GAN-based models would still be desirable for fast 3D generation.
+In this work, we propose Triplane Attention for text-guided 3D generation (TPA3D), an end-to-end trainable GAN-based deep learning model
+for fast text-to-3D generation. With only 3D shape data and their rendered 2D images observed during training, our TPA3D is designed to
+retrieve detailed visual descriptions for synthesizing the corresponding
+3D mesh data. This is achieved by the proposed attention mechanisms
+on the extracted sentence and word-level text features. In our experiments, we show that TPA3D generates high-quality 3D textured shapes
+aligned with fine-grained descriptions, while impressive computation efficiency can be observed.
           </p>
         </div>
       </div>
@@ -163,104 +177,219 @@
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/compare.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            Qualitative comparisons with TAPS3D on ShapeNet.
+          </h2>
+        </div>
+        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
+          <img src="static/images/compare_Omni.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            Qualitative comparisons with TAPS3D on OmniObject3D.
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/manipulation.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            Examples of chair manipulation by adding different detailed text descriptions.
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/qualitative.png" alt="MY ALT TEXT" width="80%"/>
+          <h2 class="subtitle has-text-centered">
+            Example text-guided 3D generation results of TPA3D.
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/sds_compare.png" alt="MY ALT TEXT" width="80%"/>
+          <h2 class="subtitle has-text-centered">
+            Qualitative comparisons with SDS-based methods.
+          </h2>
+        </div>
       </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
     </div>
   </div>
-</div>
-</div>
 </section>
 <!-- End image carousel -->
 
 
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
+<!-- Method -->
 <section class="hero is-small">
   <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title method">Method</h2>
+    </div>
     <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
+      <!-- Model Overview -->
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/Model_Overview_symbol.png" alt="MY ALT TEXT"/>
+        <div class="content has-text-justified">
+          <p>
+            <strong>Overview of TPA3D for fast text-guided 3D generation.</strong>
+            By taking sentence and word-level features as the inputs, TPA3D utilizes generator G
+            and triplane attention (TPA) modules to predict the associated triplane features for 3D
+            textured mesh generation, with 3D content information properly observed. Following
+            GET3D, each G contains branches for geometry and texture synthesis. Note that
+            InstructBLIP is applied to produce pseudo captions from rendered images during
+            training, while CLIP extracts the resulting text features.
+          </p>
         </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
+      </div>
+      <!-- TPA Module -->
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/TPA.png" alt="MY ALT TEXT" width="80%"/>
+        <div class="content has-text-justified">
+          <p>
+            <strong>Design of TriPlane Attention (TPA).</strong>
+            TPA first performs plane-wise self-attention and cross-plane attention to 3D triplane features 
+            to enforce intra-plane consistency and 3D spatial connectivity, respectively. 
+            Cross-word attention is subsequently performed to exploit word-level features for incorporating detailed information. 
+          </p>
         </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
+      </div>
+
+    </div>
+    
+  </div>
+</section>
+<!-- End Method -->
+
+<!-- Quantitative Results -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title method">Quantitative Results</h2>
+    </div>
+    <div class="container">
+      <!-- Table -->
+      <div class="item">
+        <!-- Your image here -->
+        <img src="static/images/quantitative.png" alt="MY ALT TEXT" width="90%"/>
+        <div class="content has-text-justified">
+          <p>
+            <strong>Quantitative results in terms of (a) FID and (b) CLIP R-Precision@5.</strong>
+            Compared to TAPS3D with only sentence-level features, our TPA3D performs additional 
+            word-level refinement and results in better visual quality and improved alignment between 
+            generated shapes and given text prompts.
+          </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
 
+<!-- More Qualitative Results -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title method">More Qualitative Results</h2>
+    </div>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/more_compare.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            More qualitative comparisons with TAPS3D on ShapeNet.
+          </h2>
+        </div>
+        <div class="item">
+        <!-- Your image here -->
+          <img src="static/images/more_compare_Omni.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            More qualitative comparisons with TAPS3D on OmniObject3D.
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/more_manipulation.png" alt="MY ALT TEXT" width="45%"/>
+          <h2 class="subtitle has-text-centered">
+            More manipulation examples of adding different detailed text descriptions.
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/interpolation.png" alt="MY ALT TEXT" width="75%"/>
+          <h2 class="subtitle has-text-centered">
+            The interpolation results of our TPA3D.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End More Qualitative Results -->
 
+<!-- Ablation Study -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title method">Ablation Study</h2>
+    </div>
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/ablation_block.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-justified">
+            <strong>Ablation study on components in TPA blocks.</strong>
+            To verify the function of each component in TPA blocks as our claim, we singly
+            remove cross-plane attention or cross-word attention in TPA blocks.
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/arch_ablation.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-justified">
+            <strong>The architectures for the ablation study on components in TPA blocks.</strong>
+            (a) Without crossplane attention, the word features might be attended to the region with incomplete
+            spatial information, which leads to a lower visual quality. 
+            (b) Without cross-word attention, triplanes lack detailed information in the description and only contain global
+            information from sentence features.
+          </h2>
+        </div>
+      </div>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/ablation_branch.png" alt="MY ALT TEXT" height="40%"/>
+          <h2 class="subtitle has-text-centered">
+            Ablation study for assessing the efficacy of TPA blocks in geometry
+            and texture branches.
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/ablation_num.png" alt="MY ALT TEXT" height="40%"/>
+          <h2 class="subtitle has-text-centered">
+            Ablation study on block numbers of TPA.
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img src="static/images/ablation_loss.png" alt="MY ALT TEXT" height="40%"/>
+          <h2 class="subtitle has-text-centered">
+            Ablation study on training objectives of TPA (CLIP similarity score & mismatching objective).
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
 
 <!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Poster</h2>
@@ -270,7 +399,7 @@
         
       </div>
     </div>
-  </section>
+  </section> -->
 <!--End paper poster -->
 
 
@@ -278,7 +407,8 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>BibTex Code Here</code></pre>
+      <pre><code>
+    </code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
